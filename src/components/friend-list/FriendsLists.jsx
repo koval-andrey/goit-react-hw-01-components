@@ -1,11 +1,10 @@
-import PropTypes from 'prop-tipes';
+import PropTypes from 'prop-types';
 import styles from './FriendsLists.module.css';
 import FriendsItem from './FriendsItem';
-import './App.css';
 
 function FriendsLists( {friends} ) {
   return (
-    <ul className={styles.friendslist}>
+    <ul className={styles.friendsList}>
     {friends.map(item => (
         <FriendsItem
           key={item.id}
@@ -18,7 +17,7 @@ function FriendsLists( {friends} ) {
   );
 }
 
-FriendsLists.PropTypes = {
+FriendsLists.propTypes = {
     friends: PropTypes.array.isRequired,
 }
 

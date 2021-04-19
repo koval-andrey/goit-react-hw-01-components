@@ -1,7 +1,5 @@
-import PropTypes from 'prop-tipes';
+import PropTypes from 'prop-types';
 import styles from './FriendsItem.module.css';
-import friends from './frienfs.json';
-import './App.css';
 
 function FriendsItem( {avatar, name, isOnline} ) {
   return (
@@ -16,12 +14,12 @@ function FriendsItem( {avatar, name, isOnline} ) {
   );
 }
 
-Product.defaultProps = {
+FriendsItem.defaultProps = {
     avatar:
       'https://webnull.info/attachments/fltdo8l-png.12440/',
   };
 
-FriendsItem.PropTypes = {
+FriendsItem.propTypes = {
     isOnline: PropTypes.bool,
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
